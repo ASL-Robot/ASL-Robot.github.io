@@ -16,7 +16,7 @@ Below is the algorithm that we used to capture the position data.
 
 The body joint tracking sample code is provided in the Kinect SDK. However, since the position data of the facial features is also important, we modified the sample code to track the facial points. Because only data during a sign is needed, we also add “start capture” and “stop capture” buttons to make sure that only valid data are captured. The recording rate is 30 fps. At every frame, the positions of the upper body joints and facial feature are recorded. The time for each frame is also saved to the data file, and time 0 second is when capture starts. Below is what the capture window looks like.
 
-![Capture Window]({{site.baseurl}}/imgs/Stop.png)
+<img src="{{site.baseurl}}/imgs/Stop.png" alt="Capture Window"  width="500">
 
 Initially, the position data and the time were saved in one file, but the sensor sometimes cannot pick up the locations of the facial features. This makes data processing harder since the data is not in order anymore if one face frame is missing. To fix this issue, we separate the position data for upper body joints and facial features in different file, and the time data is also saved in a different file. So, for one sign, three data files are: one for joint positions, one for facial feature positions, and one for time data. 
 
