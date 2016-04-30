@@ -6,7 +6,7 @@ title: {{ site.name }}
 <div id="home">
   <ul class="posts">
     {% for p in site.pages %}
-      <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+      <li><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></li>
     {% endfor %}
   </ul>
 </div>
