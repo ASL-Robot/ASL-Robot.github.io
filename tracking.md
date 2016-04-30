@@ -4,5 +4,4 @@ layout: post
 permalink: /tracking.html
 ---
 
-
-tracking page
+The learning phase of the project is completed with motion capture, data stabilization, and position mapping. The mapped position data is tested in robot simulation first. After testing, the position data will be applied onto the robot.
