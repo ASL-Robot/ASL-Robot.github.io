@@ -27,5 +27,9 @@ One way to check the captured data is to calculate the bone length. As we move o
 
 <img src="{{site.baseurl}}/imgs/Stop.png" alt="Capture Window" class = "centered" width="500">
 
+The bone length from joint a (with position (xa, ya, za)) to joint b (with position (xb, yb, zb))  is calculated using the following formula. 
+
+<img src="{{site.baseurl}}/imgs/f1.png" alt="Formula 1" class = "centered">
+
 
 ### 3. Mapping 
