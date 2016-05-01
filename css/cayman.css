@@ -15,10 +15,6 @@ a {
   a:hover {
     text-decoration: underline; }
 
-.centered {
-  display: block;
-  margin: auto; }
-
 .btn {
   display: inline-block;
   margin-bottom: 1rem;
@@ -34,6 +30,10 @@ a {
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0.2);
     border-color: rgba(255, 255, 255, 0.3); }
+  .btn.active {
+    background-color: rgba(0, 128, 192, 0.2); }
+  .btn.active:hover {
+    background-color: rgba(64, 192, 255, 0.35); }
   .btn + .btn {
     margin-left: 1rem; }
   @media screen and (min-width: 64em) {
