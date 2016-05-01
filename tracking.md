@@ -35,7 +35,7 @@ After calculating the bone length for the arm (shoulder to elbow), forearm (elbo
 
 <img src="{{site.baseurl}}/imgs/f2.png" alt="Formula 1" class = "centered">
 
-Where <img src="{{site.baseurl}}/imgs/f2.png" alt="Formula 1"> is the unit vector from the shoulder to the old elbow position.
+Where <img src="{{site.baseurl}}/imgs/unitVector.png" alt="Unite Vector"> is the unit vector from the shoulder to the old elbow position.
 
 
 
