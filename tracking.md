@@ -45,7 +45,7 @@ The new position of the wrist is calculated in the same manner with the forearm 
 
 The procedure is repeated for the hand and hand tip positions for all frames. After stabilizing the position data, it is seen that the motions plot for wrist and hand tip are smoother than the captured motion. Below is a comparison between the two.
 
-<img src="{{site.baseurl}}/imgs/graphKinect.png" alt="Kinect Graph"  width="500"><img src="{{site.baseurl}}/imgs/graph_stabilized.png" alt="Stabilized graph"  width="500">
+<img src="{{site.baseurl}}/imgs/graphKinect.png" alt="Kinect Graph"  width="400"><img src="{{site.baseurl}}/imgs/graph_stabilized.png" alt="Stabilized graph"  width="400">
 
 
 
