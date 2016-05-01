@@ -58,3 +58,22 @@ The position data is exported in to *.mat files, one for the body joints, one fo
 ### 3. Mapping 
 To map the position data to the robot, the origin is also chosen to be at the midpoint of the robot shoulders. The axis orientation is also the same as in data stabilization. The hand position is prioritized since its position also determines the meaning of a sign. For example, one of the signs below means “mom,” and the other means “dad.” The sign with the thumb placed at the chin means “mom”, and the sign with the thumb placed on the forehead means “dad.”
 
+To determine the hand position, the coordinates is divided into two parts: y≤0, and y>0. If the y and z components of the hand is positive, the distance (yz plane) from the hand position to each of the facial points is calculated for the stabilized data set. The robot’s hand position on the yz plane is calculated using the obtained distance from previous part. The x component of the robot hand position is the same as the x component of the stabilized hand data.  However, if the y and z components of the robot hand is negative, its position is calculated based on the relative distance to both shoulders. The x component of the robot hand is the sum of the x component of the stabilized data and half of the robot’s body thickness. With the hand position found, the wrist position is calculated using the hand to wrist unit vector (stabilized data) and the robot hand length.
+The positions of the shoulders throughout a sign is fixed because it is observed that the shoulder position do not change in a sign. The unit vector from shoulder to elbow u<sub>elSh</sub> in the stabilized data set is calculated and used to calculate the temporary position of the elbow.
+
+<img src="{{site.baseurl}}/imgs/f5.png" alt="Formula 5" class = "centered">
+
+With three points (wrist, elbow, and shoulder), a plane equation is formed. With the position of robot’s wrist being (x<sub>wrR</sub>, y<sub>wrR</sub>, z<sub>wrR</sub>), the plane equation can be formed as follow.
+
+<img src="{{site.baseurl}}/imgs/f6.png" alt="Formula 6">
+
+Using equations (1), (2), and (3), the true position of the robot elbow is found.  
+This process is repeated for every frame, and the position for each joint of the robot is calculated. Below is the comparison of the captured, stabilized and mapped motion for the sign “hello.”
+
+<img src="{{site.baseurl}}/imgs/graphKinect.png" alt="Kinect Graph" class="centered" width="400">
+
+<img src="{{site.baseurl}}/imgs/graph_stabilized.png" alt="Stabilized graph" class="centered" width="400">
+
+<img src="{{site.baseurl}}/imgs/graph_Mapped.png" alt="Mapped graph" class="centered" width="400">
+
+
