@@ -35,7 +35,7 @@ After calculating the bone length for the arm (shoulder to elbow), forearm (elbo
 
 <img src="{{site.baseurl}}/imgs/f2.png" alt="Formula 2" class = "centered">
 
-Where <img src="{{site.baseurl}}/imgs/unitVector.png" alt="Unite Vector"> is the unit vector from the shoulder to the old elbow position.
+Where <img src="{{site.baseurl}}/imgs/unitVector.png" alt="Unit Vector"> is the unit vector from the shoulder to the old elbow position.
 
 <img src="{{site.baseurl}}/imgs/f3.png" alt="Formula 3" class = "centered">
 
@@ -70,9 +70,9 @@ With three points (wrist, elbow, and shoulder), a plane equation is formed. With
 Using equations (1), (2), and (3), the true position of the robot elbow is found.  
 This process is repeated for every frame, and the position for each joint of the robot is calculated. Below is the comparison of the captured, stabilized and mapped motion for the sign “hello.”
 
-<img src="{{site.baseurl}}/imgs/graphKinect.png" alt="Kinect Graph" class="centered" width="400">
+<img src="Kinect Graph" class="centered" width="400">
 
-<img src="{{site.baseurl}}/imgs/graph_stabilized.png" alt="Stabilized graph" class="centered" width="400">
+<img src="stabilized graph" class="centered" width="400">
 
 <img src="{{site.baseurl}}/imgs/graph_Mapped.png" alt="Mapped graph" class="centered" width="400">
 
