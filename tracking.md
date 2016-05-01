@@ -27,15 +27,25 @@ One way to check the captured data is to calculate the bone length. As we move o
 
 <img src="{{site.baseurl}}/imgs/Stop.png" alt="Capture Window" class = "centered" width="500">
 
-The bone length from joint a (with position (xa, ya, za)) to joint b (with position (xb, yb, zb))  is calculated using the following formula. 
+The bone length from joint a (with position (x<sub>a</sub>, y<sub>a</sub>, z<sub>a</sub>)) to joint b (with position (x<sub>b</sub>, y<sub>b</sub>, z<sub>b</sub>))  is calculated using the following formula. 
 
 <img src="{{site.baseurl}}/imgs/f1.png" alt="Formula 1" class = "centered">
 
-After calculating the bone length for the arm (shoulder to elbow), forearm (elbow to wrist), hand (wrist to palm), and hand tip (palm to tip), the average length for each segment is calculated. Then in each frame, a unit vector for each segment is calculated and multiplied to the average length of that segment. For example, the average length of the arms is larm. The position of the right shoulder is (xsh, ysh, zsh), the old position of the right elbow is (xel, yel, zel). The new position of the elbow is calculated as follow:
+After calculating the bone length for the arm (shoulder to elbow), forearm (elbow to wrist), hand (wrist to palm), and hand tip (palm to tip), the average length for each segment is calculated. Then in each frame, a unit vector for each segment is calculated and multiplied to the average length of that segment. For example, the average length of the arms is larm. The position of the right shoulder is (x<sub>sh</sub>, y<sub>sh</sub>, z<sub>sh</sub>), the old position of the right elbow is (x<sub>el</sub>, y<sub>el</sub>, z<sub>el</sub>). The new position of the elbow is calculated as follow:
 
-<img src="{{site.baseurl}}/imgs/f2.png" alt="Formula 1" class = "centered">
+<img src="{{site.baseurl}}/imgs/f2.png" alt="Formula 2" class = "centered">
 
 Where <img src="{{site.baseurl}}/imgs/unitVector.png" alt="Unite Vector"> is the unit vector from the shoulder to the old elbow position.
+
+<img src="{{site.baseurl}}/imgs/f3.png" alt="Formula 3" class = "centered">
+
+The new position of the wrist is calculated in the same manner with the forearm length l<sub>foreArm</sub>. The unit vector u<sub>wrEl</sub> from the old elbow position to the old wrist position is calculated. The new wrist position is:
+
+<img src="{{site.baseurl}}/imgs/f4.png" alt="Formula 4" class = "centered">
+
+The procedure is repeated for the hand and hand tip positions for all frames. After stabilizing the position data, it is seen that the motions plot for wrist and hand tip are smoother than the captured motion. Below is a comparison between the two.
+
+<img src="{{site.baseurl}}/imgs/graphKinect.png" alt="Kinect Graph"  width="500"><img src="{{site.baseurl}}/imgs/graph_stabilized.png" alt="Stabilized graph"  width="500">
 
 
 
