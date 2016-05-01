@@ -31,5 +31,12 @@ The bone length from joint a (with position (xa, ya, za)) to joint b (with posit
 
 <img src="{{site.baseurl}}/imgs/f1.png" alt="Formula 1" class = "centered">
 
+After calculating the bone length for the arm (shoulder to elbow), forearm (elbow to wrist), hand (wrist to palm), and hand tip (palm to tip), the average length for each segment is calculated. Then in each frame, a unit vector for each segment is calculated and multiplied to the average length of that segment. For example, the average length of the arms is larm. The position of the right shoulder is (xsh, ysh, zsh), the old position of the right elbow is (xel, yel, zel). The new position of the elbow is calculated as follow:
+
+<img src="{{site.baseurl}}/imgs/f2.png" alt="Formula 1" class = "centered">
+
+Where <img src="{{site.baseurl}}/imgs/f2.png" alt="Formula 1"> is the unit vector from the shoulder to the old elbow position.
+
+
 
 ### 3. Mapping 
